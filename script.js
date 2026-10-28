@@ -46,7 +46,7 @@ button.addEventListener('click', function shout() {
 // STEP 3: Get the "Calculate Total" button by ID ("btnCalc")
 //         Add a click event listener.
 //         Inside the listener:
-const calc = document.getElementById('Calculate Total');
+const calc = document.getElementById('btnCalc');
 calc.addEventListener('click', function pizza() {
     const sizebuttons = document.getElementsByName("rg");
     let sizePrice = 0;
