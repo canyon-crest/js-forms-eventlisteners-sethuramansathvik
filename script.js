@@ -77,7 +77,8 @@ calc.addEventListener('click', function pizza() {
     if (customerName==="") {
         customerName = "Customer";
     }
-    document.getElementById("myPara").innerHTML = "";
+    document.getElementById("myPara").innerHTML = customerName + ", your total is $" + total.toFixed(2);
+
 })
 const clearButton = document.getElementById("clearBtn");
 
