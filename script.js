@@ -52,23 +52,24 @@ calc.addEventListener('click', function pizza() {
     let sizePrice = 0;
     for (let i =0;i<sizebuttons.length;i++) {
         if(sizebuttons[i].checked) {
-            sizePrice = parsefloat(sizebuttons[i].value);
+            sizePrice = parseFloat(sizebuttons[i].value);
         }
     }
     const toppingchecks = document.getElementsByName('cb');
     let toppingcount = 0;
     for (let i = 0; i<toppingchecks.length;i++) {
-        if (toppingcount[i].checked) {
+        if (toppingchecks[i].checked) {
             toppingcount++;
         }
     }
+    let fee = 0
     const toppingsPrice = toppingcount*0.50;
     const selectedvalue = document.getElementById("serviceSelect").value;
-    if (selectedvalue = "dinein") {
-        let fee = 0;
-    } else if(selectedvalue = "takeout") {
-        let fee = 1.50;
-    } else if(selectedvalie = "delivery") {
+    if (selectedvalue === "dinein") {
+        fee = 0;
+    } else if(selectedvalue === "takeout") {
+        fee = 1.50;
+    } else if(selectedvalue === "delivery") {
         fee = 3.00;
     }
     const total = toppingsPrice + sizePrice + fee;
@@ -76,18 +77,19 @@ calc.addEventListener('click', function pizza() {
     if (customerName==="") {
         customerName = "Customer";
     }
-    const clearButton = document.getElementById("clearBtn");
-    clearButton.addEventListener("click", function clearForm() {
-        document.getElementById("myInput").value = "";
-        document.getElementById("r3").checked = true;
-        const toppingCheckboxes = document.getElementsByName("cb");
-        for (let i = 0; i< toppingCheckboxes.length; i++) {
-            toppingCheckboxes[i].checked = false;
-        }
-        document.getElementById("serviceSelect").value="dinein";
-        document.getElementById("myPara").innerHTML = "";
-    })
+    getElementById("myPara").innerHTML = "";
 })
+const clearButton = document.getElementById("clearBtn");
+clearButton.addEventListener("click", function clearForm() {
+    document.getElementById("myInput").value = "";
+    document.getElementById("r3").checked = true;
+    const toppingCheckboxes = document.getElementsByName("cb");
+    for (let i = 0; i< toppingCheckboxes.length; i++) {
+        toppingCheckboxes[i].checked = false;
+    }
+    document.getElementById("serviceSelect").value="dinein";
+    document.getElementById("myPara").innerHTML = "";
+});
 //   a) Get the selected size price:
 //      Use document.getElementsByName("rg") to get all
 //      size radio buttons. Loop through them to find the
