@@ -28,7 +28,10 @@
 //            using .innerHTML
 //
 //         Example: "hello" → "HELLO!"
-
+const button = document.getElementById("btnShout");
+button.addEventListener('click', function shout() {
+    document.getElementById('outShout').innerHTML = (document.getElementById('shoutInput').value).toUpperCase()+"!";
+} )
 
 // ============================================
 //  MAIN: Pizza Builder
