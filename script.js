@@ -77,7 +77,7 @@ calc.addEventListener('click', function pizza() {
     if (customerName==="") {
         customerName = "Customer";
     }
-    getElementById("myPara").innerHTML = "";
+    document.getElementById("myPara").innerHTML = "";
 })
 const clearButton = document.getElementById("clearBtn");
 
