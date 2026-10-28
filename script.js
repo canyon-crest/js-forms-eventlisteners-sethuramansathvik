@@ -62,7 +62,7 @@ calc.addEventListener('click', function pizza() {
             toppingcount++;
         }
     }
-    let fee = 0
+    let fee = 0;
     const toppingsPrice = toppingcount*0.50;
     const selectedvalue = document.getElementById("serviceSelect").value;
     if (selectedvalue === "dinein") {
