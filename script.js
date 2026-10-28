@@ -88,7 +88,7 @@ clearButton.addEventListener("click", function clearForm() {
         toppingCheckboxes[i].checked = false;
     }
     document.getElementById("serviceSelect").value="dinein";
-    document.getElementById("myPara").innerHTML = "";
+    document.getElementById("myPara").innerHTML = customerName+", your total is $"+total.toFixed(2);
 });
 //   a) Get the selected size price:
 //      Use document.getElementsByName("rg") to get all
