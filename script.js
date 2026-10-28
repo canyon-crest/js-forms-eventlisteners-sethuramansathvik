@@ -80,15 +80,19 @@ calc.addEventListener('click', function pizza() {
     getElementById("myPara").innerHTML = "";
 })
 const clearButton = document.getElementById("clearBtn");
+
 clearButton.addEventListener("click", function clearForm() {
     document.getElementById("myInput").value = "";
     document.getElementById("r3").checked = true;
+
     const toppingCheckboxes = document.getElementsByName("cb");
-    for (let i = 0; i< toppingCheckboxes.length; i++) {
+
+    for (let i = 0; i < toppingCheckboxes.length; i++) {
         toppingCheckboxes[i].checked = false;
     }
-    document.getElementById("serviceSelect").value="dinein";
-    document.getElementById("myPara").innerHTML = customerName+", your total is $"+total.toFixed(2);
+
+    document.getElementById("serviceSelect").value = "dinein";
+    document.getElementById("myPara").innerHTML = "";
 });
 //   a) Get the selected size price:
 //      Use document.getElementsByName("rg") to get all
